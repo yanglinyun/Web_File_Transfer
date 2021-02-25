@@ -1,0 +1,125 @@
+body {
+  padding: 0;
+  margin: 0;
+  height: 100vh;
+  background: yellow;
+  margin: 0 auto;
+  box-sizing: border-box;
+  border: 10px solid #000;
+}
+.brows {
+  padding: 30px 0 30px 0;
+  display: flex;
+  justify-content: space-around;
+  .brow {
+    height: 30px;
+    width: 35%;
+    background: black;
+    display: inline-block;
+    transform: rotateZ(15deg);
+    &:nth-child(2) {
+      transform: rotateZ(-15deg);
+    }
+  }
+}
+.balls {
+  display: flex;
+  justify-content: space-around;
+  .ball {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 700;
+    font-size: 2em;
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    border: 10px solid #000;
+    background: #fff;
+  }
+}
+.mouth {
+  margin: 50px auto;
+  width: 50%;
+  height: 100px;
+  border-bottom-left-radius: 50%;
+  border-bottom-right-radius: 50%;
+  border: 5px solid #000;
+  background: red;
+  display: flex;
+  position: relative;
+  justify-content: space-around;
+  .tooth {
+    width: 20%;
+    height: 40%;
+    background: #fff;
+    border-color: #000;
+    border-style: solid;
+    border-left-width: 2px;
+  }
+  .link,
+  .upload,
+  .download {
+    visibility: hidden;
+    margin: 0 auto;
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    width: 100%;
+    height: 100%;
+    border-bottom-left-radius: 0%;
+    border-bottom-right-radius: 0%;
+    button,
+    input {
+      background: red;
+      width: 100%;
+      height: 80%;
+      border: none;
+      font-size: 60px;
+      border-bottom: 5px solid #fff;
+      color: #fff;
+      margin: 0 10px;
+      outline: none;
+      ::-webkit-input-placeholder{
+        color:#fff;
+      }
+    }
+    input[type="file"] {
+      margin: 0;
+      border: 0;
+      height: 0;
+    }
+    button {
+      border: none;
+    }
+  }
+  .link {
+    width: 60%;
+    background: #fff;
+    left: 50%;
+    transform: translate(-50%);
+    top: 50%;
+    flex-wrap: wrap;
+    display: flex;
+    align-items: center;
+    height: auto;
+    border: 5px solid #000;
+    text-align: center;
+    border-radius: 10px;
+    div,
+    img {
+      width: 100%;
+    }
+    button {
+      text-align: center;
+      margin: 0;
+      font-size: 1em;
+    }
+  }
+}
+
+@media screen and (min-width: 540px) {
+  body {
+    max-width: 540px;
+  }
+}
