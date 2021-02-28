@@ -6,6 +6,46 @@ body {
   margin: 0 auto;
   box-sizing: border-box;
   border: 10px solid #000;
+  position: relative;
+}
+#pro {
+  width: 100%;
+  position: absolute;
+  top: -5px;
+  left: 50%;
+  transform: translateX(-50%);
+  margin: 0;
+  padding: 0;
+}
+textarea{
+  position: absolute;
+  top:0;
+  height: 0;
+  width: 0;
+}
+#uploadInput {
+  opacity: 0;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+input[type="text"] {
+  text-align: center;
+}
+::-webkit-input-placeholder {
+  color: #fff;
+}
+:-moz-placeholder {
+  /* Firefox 18- */
+  color: #fff;
+}
+::-moz-placeholder {
+  /* Firefox 19+ */
+  color: #fff;
+}
+:-ms-input-placeholder {
+  color: #fff;
 }
 .brows {
   padding: 30px 0 30px 0;
@@ -75,14 +115,21 @@ body {
       width: 100%;
       height: 80%;
       border: none;
-      font-size: 60px;
+      font-size: 49px;
       border-bottom: 5px solid #fff;
       color: #fff;
       margin: 0 10px;
       outline: none;
-      ::-webkit-input-placeholder{
-        color:#fff;
+      ::-webkit-input-placeholder {
+        color: #fff;
       }
+    }
+    .uploadBtn {
+      margin: 0;
+      height: 100%;
+    }
+    #btnsave {
+      display: none;
     }
     input[type="file"] {
       margin: 0;

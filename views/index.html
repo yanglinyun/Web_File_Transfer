@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>文件上传</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../stylesheets/index.css" />
+  </head>
+
+  <body>
+    <progress value="0" id="pro" max="100"></progress>
+    <div class="brows">
+      <div class="brow"></div>
+      <div class="brow"></div>
+    </div>
+    <div class="balls">
+      <div class="ball receive func" data-func="download">收</div>
+      <div class="ball send func" data-func="upload">发</div>
+    </div>
+    <div class="mouth">
+      <div class="tooth"></div>
+      <div class="tooth"></div>
+      <div class="tooth"></div>
+      <div class="tooth"></div>
+      <div class="tooth"></div>
+      <div class="link dialog">
+        <img src="qr.png" alt="" class="qr" width="80px" />
+        <textarea
+          name=""
+          id="copyInfo"
+          cols="30"
+          rows="10"
+          style="position: absolute; z-index: -1; width: 0"
+        ></textarea>
+        <button class="copyLink">点击复制链接</button>
+        <div>提取码</div>
+        <div class="token"></div>
+        <div><span class="expire"></span>过期</div>
+      </div>
+      <div class="mouth download dialog">
+        <input type="text" maxlength="4" class="getCode" placeholder="提取码" />
+      </div>
+      <div class="mouth upload dialog">
+        <form id="form1">
+          <button class="uploadBtn">
+            上传<input type="file" id="uploadInput" name="file" name="file" />
+          </button>
+        </form>
+      </div>
+    </div>
+  </body>
+  <script
+    type="text/javascript"
+    src="../javascripts/jquery-2.0.3.min.js"
+  ></script>
+  <script type="text/javascript" src="../javascripts/fileupload.js"></script>
+  <script src="../javascripts/index.js"></script>
+</html>
